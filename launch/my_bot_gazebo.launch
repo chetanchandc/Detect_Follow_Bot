@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    
+
+    <param name="robot_description" textfile="$(find my_bot)/urdf/my_bot.urdf" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"  
+         args="-param robot_description -urdf -model my_bot" />  
+         
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+
+    <node name="line_detector" pkg="my_bot" type="line_detector.py"/>
+
+   <node name="cam_publisher" pkg="my_bot" type="cam_publisher.py"/>
+   <node name="face_detection_control_bot" pkg="my_bot" type="face_detection_control_bot.py"/>
+
+</launch>
