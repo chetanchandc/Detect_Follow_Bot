@@ -19,3 +19,7 @@ rosrun rqt_image_view rqt_image_view
 
 
 ****YET TO MODIFY/DEVELOP MANY****
+
+    • Future work –  Virtual Bot guide. 
+    • To create museum world and allow robot to navigate autonomously to each room when detects the face of virtual visitor(person online) and stops for a while to showcase the art(image) to the virtual person.
+
